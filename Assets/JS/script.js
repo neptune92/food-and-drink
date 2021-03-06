@@ -9,8 +9,14 @@
     // time constraints
 
 
-
-// search bar
-// submit button
-// 
-
+// MVP
+// search barx2
+// submit buttonx2
+// variables
+    // search input value
+    // variables to get handles on html elements
+// functions
+    // function for api call
+    // event handler for submit
+    // display results function
+// basic styling
