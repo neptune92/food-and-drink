@@ -20,3 +20,9 @@
     // event handler for submit
     // display results function
 // basic styling
+
+
+
+$(document).ready(function(){
+    $('select').formSelect();
+  });
