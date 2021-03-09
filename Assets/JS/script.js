@@ -21,7 +21,10 @@
     // function for api call
     // event handler for submit button
     // display results function
-    // local storage
 // basic styling
 
-var 
+
+
+$(document).ready(function(){
+    $('select').formSelect();
+  });
