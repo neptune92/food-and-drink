@@ -41,13 +41,13 @@
                     <label>Dietary Choices</label>
                     <select class="browser-default" id="foodinput">
                         <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 3</option>
-                        <option value="5">Option 3</option>
-                        <option value="6">Option 3</option>
-                        <option value="7">Option 3</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Vegan">Vegan</option>
+                        <option value="Pescetarian">Pescetarian</option>
+                        <option value="Gluten-Free">Gluten-Free</option>
+                        <option value="Paleo">Paleo</option>
+                        <option value="Keto">Keto</option>
+                        <option value="Omnivore">Omnivore</option>
                     </select>
                     <br>
                     <!-- add submit button here -->
@@ -76,29 +76,29 @@
                             </form>
                         </div>
                     </nav>
-                    <div class="card-action">
+                </div>
 
-                        <!-- this is where dropdown goes -->
-                        <label>Spirits Choices</label>
-                        <select class="browser-default" id="drinkinput">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                            <option value="4">Option 3</option>
-                            <option value="5">Option 3</option>
-                            <option value="6">Option 3</option>
-                            <option value="7">Option 3</option>
-                        </select>
-                        <br>
-                        <!-- add submit button here -->
-                        <button class="btn waves-effect waves-light" id="drinkbtn" type="submit" name="action">Submit
-                        </button>
+                <div class="card-action">
 
-                    </div>
+                    <!-- this is where dropdown goes -->
+                    <label>Spirits Choices</label>
+                    <select class="browser-default" id="drinkinput">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="Gin">Gin</option>
+                        <option value="Tequila">Tequila</option>
+                        <option value="Whiskey">Whiskey</option>
+                        <option value="Vodka">Vodka</option>
+                        <option value="Rum">Rum</option>
+                    </select>
+                    <br>
+                    <!-- add submit button here -->
+                    <button class="btn waves-effect waves-light" id="drinkbtn" type="submit" name="action">Submit
+                    </button>
+
                 </div>
             </div>
         </div>
+    </div>
 
 
 
@@ -113,9 +113,12 @@
 
 
 
-        <!--materialize js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="Assets/JS/FoodandDrink.js"></script>
+
+    <!--materialize js-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="Assets/JS/FoodandDrink.js"></script>
 </body>
 
 </html>
