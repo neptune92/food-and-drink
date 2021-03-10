@@ -5,3 +5,19 @@
 .drinks {
     color: white;
 }
+
+body {
+    background-color: #b2dfdb;
+}
+
+.card-title {
+    color: black;
+}
+
+.choicetext {
+    color: black;
+}
+
+#heading {
+    text-align: center;
+}

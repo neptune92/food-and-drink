@@ -10,7 +10,6 @@ function foodSearchFun(event) {
     var foodInputVal = document.querySelector('#foodinput').value;
 
     if (!foodSearchVal) {
-        console.error('You need a search input value!');
         return;
     }
 
@@ -22,6 +21,8 @@ foodBtn.addEventListener('click', foodSearchFun);
 
 //  function to call food api
 function apiFood() {
+
+
 
 }
 
@@ -35,7 +36,7 @@ function drinkSearchFun(event) {
     var drinkInputVal = document.querySelector('#drinkinput').value;
 
     if (!drinkSearchVal) {
-        console.error('You need a search input value!');
+       
         return;
     }
 
@@ -50,4 +51,23 @@ drinkBtn.addEventListener('click', drinkSearchFun);
 function apiDrink() {
 
 }
+
+function renderResults() {
+
+
+}
+
+fetch("https://the-cocktail-db.p.rapidapi.com/filter.php?i=Gin", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "2d62346aabmsh1e85f5b9942a34dp19b4aajsn061b29265965",
+		"x-rapidapi-host": "the-cocktail-db.p.rapidapi.com"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
 
