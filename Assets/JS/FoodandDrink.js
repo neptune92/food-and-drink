@@ -1,5 +1,5 @@
-var foodBtn = document.querySelector('#foodbtn')
-var drinkBtn = document.querySelector('#drinkbtn')
+var foodBtn = document.querySelector('#foodbtn');
+var drinkBtn = document.querySelector('#drinkbtn');
 
 
 // function to handle food search
@@ -9,12 +9,9 @@ function foodSearchFun(event) {
     var foodSearchVal = document.querySelector('#foodsearch').value;
     var foodInputVal = document.querySelector('#foodinput').value;
 
-    if (!foodSearchVal) {
-        return;
-    }
 
     apiFood(foodSearchVal, foodInputVal);
-}
+};
 
 foodBtn.addEventListener('click', foodSearchFun);
 
@@ -44,10 +41,6 @@ function drinkSearchFun(event) {
     var drinkSearchVal = document.querySelector('#drinksearch').value;
     var drinkInputVal = document.querySelector('#drinkinput').value;
 
-    if (!drinkSearchVal) {
-       
-        return;
-    }
 
     apiDrink(drinkInputVal);
 }
@@ -79,6 +72,5 @@ function apiDrink(drinkInputVal) {
 function renderResults() {
 
 
-}
-
+};
 
