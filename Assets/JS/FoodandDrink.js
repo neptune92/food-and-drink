@@ -5,7 +5,7 @@ var drinkBtn = document.querySelector('#drinkbtn');
 // function to handle food search
 function foodSearchFun(event) {
     event.preventDefault();
-    console.log(event);
+
     var foodSearchVal = document.querySelector('#foodsearch').value;
     var foodInputVal = document.querySelector('#foodinput').value;
 
@@ -16,21 +16,12 @@ function foodSearchFun(event) {
 foodBtn.addEventListener('click', foodSearchFun);
 
 
-
-
-
 //  function to call food api
-function apiFood(foodSearchVal, foodInputVal) {
-    let url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=73d7ef2f2cb944d0baf4c5468330e08b&query=${foodSearchVal}&includeNutrition=true&diet=${foodInputVal}`
-    console.log(url)
-    fetch(url)
-    .then(res => res.json())
-    .then(function(data) {
-        console.log(data);
-    })
+function apiFood() {
 
 
-}
+
+};
 
 
 
@@ -42,35 +33,50 @@ function drinkSearchFun(event) {
     var drinkInputVal = document.querySelector('#drinkinput').value;
 
 
-    apiDrink(drinkInputVal);
-}
+    apiDrink(drinkSearchVal, drinkInputVal);
+};
 
 drinkBtn.addEventListener('click', drinkSearchFun);
 
 
 
-
-
 // function to call drink api
-function apiDrink(drinkInputVal) {
-    fetch(`https://the-cocktail-db.p.rapidapi.com/search.php?i=${drinkInputVal}`, {
+function apiDrink() {
+    fetch("https://the-cocktail-db.p.rapidapi.com/filter.php?i=Gin", {
         "method": "GET",
         "headers": {
-            "x-rapidapi-key": "009bda3157mshdff167daf0c3a14p1aa40bjsn4fa8d09c7133",
+            "x-rapidapi-key": "2d62346aabmsh1e85f5b9942a34dp19b4aajsn061b29265965",
             "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com"
         }
     })
-    .then(res => res.json())
+        .then(response => {
+            console.log(response);
+        })
+        .catch(err => {
+            console.error(err);
+        });
+
+
+};
+
+function renderResults() {
+
+
+};
+
+fetch("https://the-cocktail-db.p.rapidapi.com/filter.php?i=Gin", {
+    "method": "GET",
+    "headers": {
+        "x-rapidapi-key": "2d62346aabmsh1e85f5b9942a34dp19b4aajsn061b29265965",
+        "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com"
+    }
+})
     .then(response => {
         console.log(response);
     })
     .catch(err => {
         console.error(err);
     });
-}
 
-function renderResults() {
-
-
-};
+// need to have local storage function to save and show recent searches in the search bar
 
