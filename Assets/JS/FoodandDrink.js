@@ -1,5 +1,5 @@
-var foodBtn = document.querySelector('#foodbtn')
-var drinkBtn = document.querySelector('#drinkbtn')
+var foodBtn = document.querySelector('#foodbtn');
+var drinkBtn = document.querySelector('#drinkbtn');
 
 
 // function to handle food search
@@ -9,12 +9,9 @@ function foodSearchFun(event) {
     var foodSearchVal = document.querySelector('#foodsearch').value;
     var foodInputVal = document.querySelector('#foodinput').value;
 
-    if (!foodSearchVal) {
-        return;
-    }
 
     apiFood(foodSearchVal, foodInputVal);
-}
+};
 
 foodBtn.addEventListener('click', foodSearchFun);
 
@@ -24,7 +21,7 @@ function apiFood() {
 
 
 
-}
+};
 
 
 
@@ -35,13 +32,9 @@ function drinkSearchFun(event) {
     var drinkSearchVal = document.querySelector('#drinksearch').value;
     var drinkInputVal = document.querySelector('#drinkinput').value;
 
-    if (!drinkSearchVal) {
-       
-        return;
-    }
 
     apiDrink(drinkSearchVal, drinkInputVal);
-}
+};
 
 drinkBtn.addEventListener('click', drinkSearchFun);
 
@@ -49,25 +42,40 @@ drinkBtn.addEventListener('click', drinkSearchFun);
 
 // function to call drink api
 function apiDrink() {
+    fetch("https://the-cocktail-db.p.rapidapi.com/filter.php?i=Gin", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-key": "2d62346aabmsh1e85f5b9942a34dp19b4aajsn061b29265965",
+            "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com"
+        }
+    })
+        .then(response => {
+            console.log(response);
+        })
+        .catch(err => {
+            console.error(err);
+        });
 
-}
+
+};
 
 function renderResults() {
 
 
-}
+};
 
 fetch("https://the-cocktail-db.p.rapidapi.com/filter.php?i=Gin", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "2d62346aabmsh1e85f5b9942a34dp19b4aajsn061b29265965",
-		"x-rapidapi-host": "the-cocktail-db.p.rapidapi.com"
-	}
+    "method": "GET",
+    "headers": {
+        "x-rapidapi-key": "2d62346aabmsh1e85f5b9942a34dp19b4aajsn061b29265965",
+        "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com"
+    }
 })
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
+    .then(response => {
+        console.log(response);
+    })
+    .catch(err => {
+        console.error(err);
+    });
 
+// need to have local storage function to save and show recent searches in the search bar
