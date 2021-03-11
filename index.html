@@ -23,13 +23,13 @@
 
   <div class="row">
     <div class="col s12 m6">
-      <div class="card blue-grey darken-1">
+      <div class="card indigo accent-1">
         <div class="card-content white-text">
           <span class="card-title">Food</span>
           <nav>
             <div class="nav-wrapper">
               <form>
-                <div class="input-field">
+                <div class="input-field deep-purple lighten-4">
                   <input id="search" type="search" required>
                   <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                   <i class="material-icons">close</i>
@@ -43,8 +43,8 @@
         <div class="card-action">
 
           <!-- this is where dropdown goes -->
-          <label>Dietary Choices</label>
-          <select>
+          <label class="choicetext">Dietary Choices</label>
+          <select id="foodinput">
             <option value="" disabled selected>Choose your option</option>
             <option value="Vegetarian">Vegetarian</option>
             <option value="Vegan">Vegan</option>
@@ -58,7 +58,7 @@
           <br>
 
           <!-- add submit button here -->
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <button class="btn waves-effect waves-light blue lighten-4" type="submit" id="foodbtn" name="action">Submit
           </button>
         </div>
       </div>
@@ -68,13 +68,13 @@
 
 
     <div class="col s12 m6">
-      <div class="card blue-grey darken-1">
+      <div class="card deep-purple lighten-4">
         <div class="card-content white-text">
-          <span class="card-title">Drinks</span>
+          <span class="card-title drinks">Drinks</span>
           <nav>
             <div class="nav-wrapper">
               <form>
-                <div class="input-field">
+                <div class="input-field blue lighten-4" id="drinksearch">
                   <input id="search" type="search" required>
                   <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                   <i class="material-icons">close</i>
@@ -100,7 +100,7 @@
           <br>
 
           <!-- add submit button here -->
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <button class="btn waves-effect waves-light indigo accent-1" id="drinkbtn" type="submit" name="action">Submit
           </button>
 
 
