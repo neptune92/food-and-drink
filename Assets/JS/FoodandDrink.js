@@ -8,7 +8,8 @@ function foodSearchFun(event) {
     console.log(event);
     var foodSearchVal = document.querySelector('#foodsearch').value;
     var foodInputVal = document.querySelector('#foodinput').value;
-
+    localStorage.setItem('food', foodSearchVal);
+    pastSearchFood();
 
     apiFood(foodSearchVal, foodInputVal);
 };
@@ -37,11 +38,14 @@ function apiFood(foodSearchVal, foodInputVal) {
 // function to handle drink search
 function drinkSearchFun(event) {
     event.preventDefault();
-
     var drinkSearchVal = document.querySelector('#drinksearch').value;
     var drinkInputVal = document.querySelector('#drinkinput').value;
+    localStorage.setItem('drink', drinkSearchVal);
+    pastSearchDrink();
 
+    
 
+   
     apiDrink(drinkInputVal);
 }
 
@@ -74,3 +78,12 @@ function renderResults() {
 
 };
 
+function pastSearchFood() {
+    localStorage.getItem('food');
+    
+    
+}
+
+function pastSearchDrink() {
+    localStorage.getItem('drink');
+}
