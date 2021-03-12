@@ -26,9 +26,21 @@ function apiFood(foodSearchVal, foodInputVal) {
     console.log(url)
     fetch(url)
     .then(res => res.json())
-    .then(function(data) {
-        console.log(data);
-    })
+    .then( (data) => generateHtml(data) )
+    var generateHtml = (data) => {
+        console.log(data)
+        var html = `
+        <img src= ${data.results[0].image}>
+    <div class="title">${data.results[0].title}</div>
+    <div class="recipeInfo">
+        <span>Servings: ${data.results[0].servings}</span>
+        <span>Time:${data.results[0].readyInMinutes}</span>
+        <span>Link:${data.results[0].sourceUrl}</span>
+    </div>
+        `
+        var showRecipe = document.querySelector(".recipeHere")
+        showRecipe.innerHTML = html
+    }
 
 
 }
