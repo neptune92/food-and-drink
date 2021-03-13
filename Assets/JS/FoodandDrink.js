@@ -64,7 +64,7 @@ function drinkSearchFun(event) {
     var drinkSearchVal = document.querySelector('#drinksearch').value;
     var drinkInputVal = document.querySelector('#drinkinput').value;
     localStorage.setItem('drink', drinkSearchVal);
-    pastSearchDrink();
+    //pastSearchDrink();
 
 
 
@@ -93,14 +93,36 @@ function apiDrink(drinkInputVal) {
         <div class="row">
         <img src= ${data.drinks[0].strDrinkThumb} class="column drinkPic">
     <div class="text">Cocktail Name: ${data.drinks[0].strDrink}</div>
-        <div class="text">Ingredints: <br> ${data.drinks[0].strIngredient1}</div>
-        <div class="text"> ${data.drinks[0].strIngredient2}</div>
-        <div class="text"> ${data.drinks[0].strIngredient3}</div>
-        <div class="text"> ${data.drinks[0].strIngredient4}</div>
-        <div class="text">Instructions: <br> ${data.drinks[0].strInstructions}</div>
+    `;
+        if(data.drinks[0].strIngredient1) {
+            html += `<div class="text">Ingredints: <br> ${data.drinks[0].strIngredient1}</div>`
+        }; 
+        
+        if(data.drinks[0].strIngredient2) {
+            html += `<div class="text"> ${data.drinks[0].strIngredient2}</div>`
+        }
+        
+        if(data.drinks[0].strIngredient3) {
+            html += `<div class="text"> ${data.drinks[0].strIngredient3}</div>`
+        }
+        
+        if(data.drinks[0].strIngredient4) {
+            html += `<div class="text"> ${data.drinks[0].strIngredient4}</div>`
+        }
+        
+        if(data.drinks[0].strIngredient5) {
+            html += `<div class="text"> ${data.drinks[0].strIngredient5}</div>`
+        }
+        
+        html +=
+        `<div class="text">Instructions: <br> ${data.drinks[0].strInstructions}</div>
         </div>
-        </div>
-        `
+        </div>`
+        
+
+
+    
+
 
         //once the submit button is clicked the drink api will show
         var drinkDisplayDiv = document.querySelector(".drinkDisplay")
