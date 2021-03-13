@@ -1,6 +1,6 @@
 var foodBtn = document.querySelector('#foodbtn');
 var drinkBtn = document.querySelector('#drinkbtn');
-
+var pastFood = []
 
 // function to handle food search
 function foodSearchFun(event) {
@@ -8,15 +8,22 @@ function foodSearchFun(event) {
     console.log(event);
     var foodSearchVal = document.querySelector('#foodsearch').value;
     var foodInputVal = document.querySelector('#foodinput').value;
-    localStorage.setItem('food', foodSearchVal);
-    pastSearchFood();
 
-    apiFood(foodSearchVal, foodInputVal);
+    pastFood.push(foodSearchVal)
+    console.log(pastFood);
+    localStorage.setItem('food', JSON.stringify(pastFood));
+    var data = localStorage.getItem('food');
+    console.log(JSON.parse(data));
+
+
+    // pastSearchFood();
+
+    // apiFood(foodSearchVal, foodInputVal);
 };
 
 foodBtn.addEventListener('click', foodSearchFun);
 
-
+// parse to json
 
 
 
@@ -25,8 +32,8 @@ function apiFood(foodSearchVal, foodInputVal) {
     let url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=73d7ef2f2cb944d0baf4c5468330e08b&query=${foodSearchVal}&includeNutrition=true&diet=${foodInputVal}`
     console.log(url)
     fetch(url)
-    .then(res => res.json())
-    .then( (data) => generateHtml(data) )
+        .then(res => res.json())
+        .then((data) => generateHtml(data))
     var generateHtml = (data) => {
         console.log(data)
         var html = `
@@ -55,9 +62,9 @@ function drinkSearchFun(event) {
     localStorage.setItem('drink', drinkSearchVal);
     pastSearchDrink();
 
-    
 
-   
+
+
     apiDrink(drinkInputVal);
 }
 
@@ -76,13 +83,13 @@ function apiDrink(drinkInputVal) {
             "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com"
         }
     })
-    .then(res => res.json())
-    .then(response => {
-        console.log(response);
-    })
-    .catch(err => {
-        console.error(err);
-    });
+        .then(res => res.json())
+        .then(response => {
+            console.log(response);
+        })
+        .catch(err => {
+            console.error(err);
+        });
 }
 
 function renderResults() {
@@ -91,11 +98,11 @@ function renderResults() {
 };
 
 function pastSearchFood() {
-    localStorage.getItem('food');
+    var data = localStorage.getItem('food');
+    // parse, create for loop
+    var parseData = JSON.parse(data);
     
-    
+
+
 }
 
-function pastSearchDrink() {
-    localStorage.getItem('drink');
-}
