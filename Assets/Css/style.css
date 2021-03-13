@@ -21,3 +21,21 @@ body {
 #heading {
     text-align: center;
 }
+
+
+.drinkPic {
+    width: 312px;
+    height: 231px;
+    
+}
+
+
+.text {
+    color: black;
+}
+
+
+
+.hide {
+    display: none;
+}
