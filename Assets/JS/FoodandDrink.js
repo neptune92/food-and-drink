@@ -1,6 +1,6 @@
 var foodBtn = document.querySelector('#foodbtn');
 var drinkBtn = document.querySelector('#drinkbtn');
-
+var pastFood = []
 
 // function to handle food search
 function foodSearchFun(event) {
@@ -8,15 +8,22 @@ function foodSearchFun(event) {
     console.log(event);
     var foodSearchVal = document.querySelector('#foodsearch').value;
     var foodInputVal = document.querySelector('#foodinput').value;
-    localStorage.setItem('food', foodSearchVal);
-    pastSearchFood();
 
-    apiFood(foodSearchVal, foodInputVal);
+    pastFood.push(foodSearchVal)
+    console.log(pastFood);
+    localStorage.setItem('food', JSON.stringify(pastFood));
+    var data = localStorage.getItem('food');
+    console.log(JSON.parse(data));
+
+
+    // pastSearchFood();
+
+    // apiFood(foodSearchVal, foodInputVal);
 };
 
 foodBtn.addEventListener('click', foodSearchFun);
 
-
+// parse to json
 
 
 
@@ -25,8 +32,8 @@ function apiFood(foodSearchVal, foodInputVal) {
     let url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=c2611ff35bae4861a43a6e9ecbe3dcd4&includeNutrition=true&diet=${foodInputVal}&query=${foodSearchVal}&addRecipeInformation=true&instructionsRequired=true`
     console.log(url)
     fetch(url)
-    .then(res => res.json())
-    .then( (data) => generateHtml(data) )
+        .then(res => res.json())
+        .then((data) => generateHtml(data))
     var generateHtml = (data) => {
         console.log(data)
         var html = `
@@ -59,9 +66,9 @@ function drinkSearchFun(event) {
     localStorage.setItem('drink', drinkSearchVal);
     pastSearchDrink();
 
-    
 
-   
+
+
     apiDrink(drinkInputVal);
 }
 
