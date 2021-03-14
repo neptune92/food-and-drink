@@ -17,7 +17,7 @@ function foodSearchFun(event) {
 
   // pastSearchFood();
 
-  // apiFood(foodSearchVal, foodInputVal);
+ apiFood(foodSearchVal, foodInputVal);
 }
 
 foodBtn.addEventListener("click", foodSearchFun);
@@ -42,6 +42,7 @@ function apiFood(foodSearchVal, foodInputVal) {
         <div class="text">Time: ${data.results[0].readyInMinutes} min</div>
         <div class="text"><a href= ${data.results[0].sourceUrl} target="_blank"> Link to recipe</a</div>
     </div>
+    
         `;
     //once the submit button is clicked the food api will show
     var foodDisplayDiv = document.querySelector(".foodDisplay");
