@@ -33,24 +33,28 @@ function apiFood(foodSearchVal, foodInputVal) {
     .then((data) => generateHtml(data));
   var generateHtml = (data) => {
     console.log(data);
-    var html = `
-        <div class="container recipeInfo">
-        <div class="row">
-        <img src= ${data.results[0].image} id="foodImage">
-        <div class="text">Recipe Name: ${data.results[0].title}</div>
-        <div class="text">Serving Size: ${data.results[0].servings}</div>
-        <div class="text">Time: ${data.results[0].readyInMinutes} min</div>
-        <div class="text"><a href= ${data.results[0].sourceUrl} target="_blank"> Link to recipe</a</div>
-    </div>
-    
-        `;
-    //once the submit button is clicked the food api will show
-    var foodDisplayDiv = document.querySelector(".foodDisplay");
-    foodDisplayDiv.classList.remove("hide");
-
-    //display food api in card section
-    var showRecipe = document.querySelector(".recipeHere");
-    showRecipe.innerHTML = html;
+    for (let i = 0; i < data.results.length; i++) {
+      
+      var html = `
+          <div class="container recipeInfo">
+          <div class="row">
+          <img src= ${data.results[i].image} id="foodImage">
+          <div class="text">Recipe Name: ${data.results[i].title}</div>
+          <div class="text">Serving Size: ${data.results[i].servings}</div>
+          <div class="text">Time: ${data.results[i].readyInMinutes} min</div>
+          <div class="text"><a href= ${data.results[i].sourceUrl} target="_blank"> Link to recipe</a</div>
+      </div>
+      
+          `;
+          // once the submit button is clicked the food api will show
+          var foodDisplayDiv = document.querySelector(".foodDisplay");
+          foodDisplayDiv.classList.remove("hide");
+          
+          //display food api in card section
+          var showRecipe = document.querySelector(".recipeHere");
+          showRecipe.innerHTML += html;
+      
+    }
   };
 }
 
@@ -112,3 +116,4 @@ function apiDrink() {
     showDrink.innerHTML = html;
   };
 }
+
