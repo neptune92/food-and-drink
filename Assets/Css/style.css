@@ -1,41 +1,60 @@
 #searchsection {
-    width: 10%;
+  width: 10%;
 }
 
 .drinks {
-    color: white;
+  color: white;
 }
 
 body {
-    background-color: #b2dfdb;
+  background-color: #b2dfdb;
+  font-family: 'Comfortaa', cursive;
 }
 
 .card-title {
-    color: black;
+  color: black;
 }
 
 .choicetext {
-    color: black;
+  color: black;
 }
 
 #heading {
-    text-align: center;
+  text-align: center;
 }
-
 
 .drinkPic {
-    width: 312px;
-    height: 231px;
-    
+  width: 312px;
+  height: 231px;
 }
-
 
 .text {
-    color: black;
+  color: black;
 }
 
-
-
 .hide {
-    display: none;
+  display: none;
+}
+
+#cardtext {
+  color: black;
+  text-align: left;
+}
+
+.brand-logo {
+  font-size: 40px;
+  margin-left: 2%;
+  color: white;
+}
+
+@media only screen and (min-width: 280px) and (orientation: portrait) {
+  .drinkPic {
+    width: 200px;
+    height: 200px;
+  }
+
+  #foodImage {
+    width: 200px;
+    height: 200px;
+}
 }
