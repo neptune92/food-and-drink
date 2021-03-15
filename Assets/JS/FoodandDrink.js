@@ -27,12 +27,12 @@ foodBtn.addEventListener("click", foodSearchFun);
 //  function to call food api
 function apiFood(foodSearchVal, foodInputVal) {
   let url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=c2611ff35bae4861a43a6e9ecbe3dcd4&includeNutrition=true&diet=${foodInputVal}&query=${foodSearchVal}&addRecipeInformation=true&instructionsRequired=true`;
-  console.log(url);
+  
   fetch(url)
     .then((res) => res.json())
     .then((data) => generateHtml(data));
   var generateHtml = (data) => {
-    console.log(data);
+    
     for (let i = 0; i < data.results.length; i++) {
       
       var html = `
@@ -70,7 +70,7 @@ drinkBtn.addEventListener("click", drinkSearchFun);
 // function to call drink api
 function apiDrink() {
   var link = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
-  console.log(link);
+  
   fetch(link)
     .then((res) => res.json())
     .then((data) => generateHtml(data));
