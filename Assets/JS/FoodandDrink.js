@@ -5,24 +5,24 @@ var pastFood = [];
 // function to handle food search
 function foodSearchFun(event) {
   event.preventDefault();
-  console.log(event);
+  
   var foodSearchVal = document.querySelector("#foodsearch").value;
   var foodInputVal = document.querySelector("#foodinput").value;
 
   pastFood.push(foodSearchVal);
-  console.log(pastFood);
+  
   localStorage.setItem("food", JSON.stringify(pastFood));
   var data = localStorage.getItem("food");
   console.log(JSON.parse(data));
 
-  // pastSearchFood();
+  
 
  apiFood(foodSearchVal, foodInputVal);
 }
 
 foodBtn.addEventListener("click", foodSearchFun);
 
-// parse to json
+
 
 //  function to call food api
 function apiFood(foodSearchVal, foodInputVal) {
