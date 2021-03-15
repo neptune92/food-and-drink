@@ -15,7 +15,6 @@ function foodSearchFun(event) {
   var data = localStorage.getItem("food");
   console.log(JSON.parse(data));
 
-  // pastSearchFood();
 
  apiFood(foodSearchVal, foodInputVal);
 }
