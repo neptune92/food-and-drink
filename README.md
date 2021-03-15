@@ -9,18 +9,18 @@ As a group we were tasked with creating a web application using two relevant web
 ## Usage
 * As a user I want to be provided with a resource to find food and cocktail recipes.
 * When the webpage is opened I am provided with two search fields in the left side of the page.
-<!-- add screenshot of webpage here -->
+
 * When I use this application I am able to search recipes by dietary preference with a dropdown input (eg. Vegan, Keto, Pescetarian, etc.)
-<!-- add screenshot of dropdown -->
+
 * When I provide my dietary preference I can refine my search with keywords in the search bar.
-<!-- add screenshot of search field with criteria input -->
+
 * When I click the submit button a search result is displayed with an image of the meal, and a link to the recipe.
 * As a user I also want to be able to generate a random cocktail.
 * When I click the generate button a random cocktail recipe will generate.
 * When I am given both food and drink recipes they are stacked accordingly in the empty space provided to the right of the webpage. 
-<!-- screenshot of both results being deployed -->
+
 * The webpage is responsive to changes in size and on mobile device.
-<!-- screenshot of mobile webpage -->
+
 * Search results are stored in the local storage when the submit button is clicked.
 * ![Webpage](https://media.giphy.com/media/b5LYfu28BOszu513Ue/giphy.gif))
 
