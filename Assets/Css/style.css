@@ -47,6 +47,12 @@ body {
   color: white;
 }
 
+
+b{
+  text-align: center;
+}
+
+
 @media only screen and (min-width: 280px) and (orientation: portrait) {
   .drinkPic {
     width: 200px;
