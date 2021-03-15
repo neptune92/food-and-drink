@@ -32,7 +32,9 @@ function apiFood(foodSearchVal, foodInputVal) {
     .then((res) => res.json())
     .then((data) => generateHtml(data));
   var generateHtml = (data) => {
-    
+     //clears previous search 
+     var showRecipe = document.querySelector(".recipeHere");
+    showRecipe.innerHTML='';
     for (let i = 0; i < data.results.length; i++) {
       
       var html = `
@@ -50,8 +52,7 @@ function apiFood(foodSearchVal, foodInputVal) {
           var foodDisplayDiv = document.querySelector(".foodDisplay");
           foodDisplayDiv.classList.remove("hide");
           
-          //display food api in card section
-          var showRecipe = document.querySelector(".recipeHere");
+         
           showRecipe.innerHTML += html;
       
     }
