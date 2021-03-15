@@ -29,7 +29,7 @@ As a group we were tasked with creating a web application using two relevant web
 
 ## Links
 
-This is a link to the live site:[Live Site](https://neptune92.github.io/food-and-drink/index.html)<br>
+This is a link to the live site:[Live Site](https://neptune92.github.io/food-and-drink-sos/index.html)<br>
 
 This is a link to the repository:[Repo](https://github.com/neptune92/food-and-drink)<br>
 
