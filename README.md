@@ -22,7 +22,7 @@ As a group we were tasked with creating a web application using two relevant web
 * The webpage is responsive to changes in size and on mobile device.
 
 * Search results are stored in the local storage when the submit button is clicked.
-* ![Webpage](https://media.giphy.com/media/b5LYfu28BOszu513Ue/giphy.gif))
+ ![Webpage](https://media.giphy.com/media/b5LYfu28BOszu513Ue/giphy.gif)
 
 
 
